@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT Madras - BS Degree in Aeronautics and Space Technology</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="/static/images/logo.ico">
+</head>
+<body>
+    <!-- Password Protection Modal -->
+    <div id="passwordModal" class="password-modal-overlay">
+        <div class="password-modal">
+            <div class="password-modal-header">
+                <img src="static/images/IITM-Logo.svg" alt="IIT Madras Logo" class="modal-logo">
+                <h2>Enter Password</h2>
+            </div>
+            <div class="password-modal-body">
+                <p>Please enter the password to access this website</p>
+
+                <!-- ADD: Wrapper for input + eye icon -->
+                <div class="password-wrapper">
+                    <input type="password" id="passwordInput" class="password-input" placeholder="Enter password" />
+
+                    <!-- ADD: Eye icon -->
+                    <span id="togglePassword" class="toggle-password">&#128065;</span>
+                </div>
+
+                <div id="errorMessage" class="error-message"></div>
+            </div>
+            <div class="password-modal-footer">
+                <button id="submitBtn" class="password-submit-btn">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="top-fixed">
+        <!-- Language Bar -->
+        <div class="language-bar">
+            <div class="container">
+                <div class="language-options">
+                    <a href="#">English</a> | 
+                    <a href="#">हिंदी</a> | 
+                    <a href="#">தமிழ்</a> | 
+                    <a href="#">తెలుగు</a> | 
+                    <a href="#">മലയാളം</a> | 
+                    <a href="#">ಕನ್ನಡ</a> | 
+                    <a href="#">मराठी</a> | 
+                    <a href="#">ગુજરાતી</a> | 
+                    <a href="#">বাংলা</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header Section -->
+        <header>
+            <nav class="navbar">
+                <div class="container nav-container">
+                    <div class="logo">
+                        <a href="index.html"><img src="static/images/IITM-Logo.svg" alt="IIT Madras Logo"></a>
+                    </div>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="nav-links" id="navLinks">
+                        <ul>
+                            <li class="dropdown">
+                                <a href="/templates/academics.html"><span>Academics</span><i class="fas fa-angle-down"></i></a>
+                                <div class="dropdown-menu">
+                                    <a href="/templates/academics.html#overall-structure">Overall Structure</a>
+                                    <a href="/templates/academics.html#course-registrations">Course Registrations</a>
+                                    <a href="/templates/academics.html#assessments">Assessments</a>
+                                    <a href="/templates/academics.html#exam-cities">Exam Cities</a>
+                                    <a href="/templates/academics.html#fee-structure">Fee Structure</a>
+                                    <a href="/templates/academics.html#foundation">Foundation Level</a>
+                                    <a href="/templates/academics.html#diploma">Diploma Level</a>
+                                    <a href="/templates/academics.html#degree">Degree Level</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/templates/admissions.html"><span>Admissions</span><i class="fas fa-angle-down"></i></a>
+                                <div class="dropdown-menu">
+                                    <a href="/templates/admissions.html#important-dates">Important Dates</a>
+                                    <a href="/templates/admissions.html#mandatory-requirements">Mandatory Requirements</a>
+                                    <a href="/templates/admissions.html#eligibility">Eligibility</a>
+                                    <a href="/templates/admissions.html#process">Application Process</a>
+                                    <a href="/templates/admissions.html#admission">Admission</a>
+                                    <a href="/templates/admissions.html#regular-entry">Regular Entry</a>
+                                    <a href="/templates/admissions.html#jee-based-entry">JEE-Based Entry</a>
+                                    <a href="/templates/admissions.html#international-entry">International Entry</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/templates/resources.html"><span>Resources</span><i class="fas fa-angle-down"></i></a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/templates/happenings.html"><span>Happenings</span><i class="fas fa-angle-down"></i></a>
+                            </li>
+                            <li><a href="/templates/faq.html"><span>FAQ</span></a></li>
+                            <li class="dropdown">
+                                <a href="/templates/about.html"><span>About IITM</span><i class="fas fa-angle-down"></i></a>
+                                <div class="dropdown-menu">
+                                    <a href="/templates/about.html#about">About</a>
+                                    <a href="/templates/about.html#experience">Experience</a>
+                                    <a href="/templates/about.html#faculty">Faculty</a>
+                                </div>
+                            </li>
+                            <li><a href="/templates/signin.html" class="sign-in-btn">SIGN IN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Notification Banner -->
+        <div class="notification-banner">
+            <div class="container">
+                <div class="notification-content">
+                    <span>Interested in joining our January 2026 batch? <button class="notify-btn">NOTIFY ME</button></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>IIT Madras, India's top technical institute, welcomes you to the Four-year Non-Campus Bachelor of Science (BS) Degree in Aeronautics and Space Technology.</h1>
+            <p>Study from anywhere, at your own pace.</p>
+        </div>
+        <div class="hero-image">
+            <img src="static/images/index/background.png" alt="Aeronautics and Space Technology">
+        </div>
+    </section>
+    
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="feature-cards">
+            <div class="container">
+                <div class="card-grid">
+                    <div class="feature-card">
+                        <h3>Eligibility</h3>
+                        <p>Anyone who has completed class 12 with Physics and Maths can apply irrespective of age, role or geographical location.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Coursework</h3>
+                        <p>Content, tutorials, doubt clearing sessions & assignments will be online, while quizzes, exams and labs will be conducted in-person at IIT Madras campus.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Flexibility</h3>
+                        <p>Learn from anywhere, at your convenience. Option is available to choose the number of courses per semester. Students can exit with a diploma by completing a given set of courses.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Upgrade to On-Campus</h3>
+                        <p>After Diploma, based on tests and interviews conducted, a select number of students who applied will be offered the option of attending all degree level courses on campus at IIT Madras in person.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="display: flex;">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID" 
+                        title="BS Degree in Electronic Systems" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+            <div class="video-description">
+                <p>To provide skill-based training in aeronautics & space technology so that the students learn the analysis and design
+                tools that are commonly used in the related industry, along with the basic theory behind them. This training in design
+                and analysis tools will enable those with a non-aero background to enter an Industry that is working in the field of
+                aeronautics and space technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-section">
+        <div class="overall">
+            <div class="why-title">Why study Aeronautics and Space Technology?</div>
+            <div class="why-desc">
+                This degree builds expertise in design of aircraft and spacecraft systems and subsystems.  It prepares students for careers in aviation, defense, and space sectors with strong technical and analytical skills.
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-section">
+        <div class="programs-grid">
+            <!-- Degree Program Card -->
+            <div class="program-card">
+                <div class="program-image">
+                    <img src="static/images/index/program-bg-1.jpg" alt="Electronic Systems Background">
+                    <img src="static/images/index/iit-madras-logo.png" alt="IIT Madras Logo" class="program-logo">
+                </div>
+                <div class="program-content">
+                    <div class="program-type">DEGREE PROGRAM</div>
+                    <h2 class="program-title">BS in Aeronautics and Space Technology</h2>
+                    <p class="program-description">The main purpose of this degree program is to skill the students in the advanced analysis tools used in aeronautics as well as space technology. The courses are organized in the four main fields: Aerodynamics of Aerospace Vehicles; Flight Dynamics, orbital mechanics and Controls; Aerospace structural analysis; Gas turbine and Rocket propulsion. A capstone project leading to design of aircraft and space vehicles using all the tools developed familiarizes the students with the application of these courses to synthesize an entire system/ vehicle. There are 3 levels of courses in the program: foundation, diploma and the degree. After diploma, a few students selected based on their performance in a test and an interview conducted by IIT Madras will get an opportunity to attend the remaining classes in person on-campus. Rest of the students who meet the criteria fixed by IITM can continue in a hybrid mode towards acquiring the degree.</p>
+                    <div class="program-buttons">
+                        <a href="#" class="program-btn">Eligibility</a>
+                        <a href="#" class="program-btn">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diploma Program Card -->
+            <div class="program-card">
+                <div class="program-image">
+                    <img src="static/images/index/program-bg-2.jpg" alt="Aeronautics Background">
+                    <img src="static/images/index/iit-madras-logo.png" alt="IIT Madras Logo" class="program-logo">
+                </div>
+                <div class="program-content">
+                    <div class="program-type">DIPLOMA PROGRAM</div>
+                    <h2 class="program-title">Diploma in Aeronautics</h2>
+                    <p class="program-description">Students can exit with a diploma in Aeronautics from IIT Madras after completing courses up to the diploma level. The diploma would have familiarized the students in theoretical background and the basic analysis tools used in aeronautics in the fields of Aerodynamics, Structures, Flight Mechanics, Controls and Propulsion Systems including Solid Modelling, Computational Fluid Dynamics (CFD) & Finite Element Analysis (FEA).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="info-grid overall">
+            <!-- Student Life Block -->
+            <div class="info-block">
+                <h2>Student Experience</h2>
+                <p>Join a supportive, diverse, vibrant community of students and scholars who share your passion. Our reputation for excellence attracts some of the best minds in the world.</p>
+                <p>Alongside the academic activities, students can have fun and develop interests through clubs and extracurricular activities that help them build on social skills and career goals while enjoying a great social life.</p>
+            </div>
+
+            <!-- Timeline Block -->
+            <div class="info-block">
+                <h2>Timeline</h2>
+                <ul class="timeline-list">
+                    <li class="timeline-item">Qualifier Application: Opens in February 2026</li>
+                    <li class="timeline-item">Qualifier Application starts: February 18 , 2026</li>
+                    <li class="timeline-item">Qualifier Week 1 Starts: June 12 , 2026</li>
+                    <li class="timeline-item">Qualifier Exam:  July 19 , 2026</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="testimonial-container">
+            <div class="testimonial-image">
+                <img src="static/images/index/director.jpg" alt="IIT Madras Director">
+            </div>
+            <div class="testimonial-content">
+                <p class="directorText font-weight-500">
+                    IIT Madras has always strived to provide high-quality education accessible to the widest possible denomination.
+                    Today, Unmanned Aerial Systems (UAS) and Space Technology are major sunrise sectors in India, in civilian as well as
+                    defence domains. India is aspiring to be a net defence exporter and a large fraction of related technologies are in
+                    the fields of Aeronautics and Space Technology. A number of private industries and Defence Public Sector
+                    Undertakings (DPSUs) have come up recently. They require engineers with an understanding of the corresponding design
+                    & analysis tools and their utility/ limitations, which would help them to develop state-of-the-art/ future
+                    technologies & products. As the demand is much more than supply for well trained good quality Engineers in these
+                    sectors, Government of India is promoting education and training programmes. IIT Madras is one of the 5 regional
+                    centers identified and funded by MEITy to promote UAV related technology and has also engaged with ISRO right from
+                    its inception. To support the efforts towards capacity building in these sectors, IIT Madras is introducing this BS
+                    programme in Aeronautics and Space Technology, which is also aligned with the goals of the National Educational
+                    Policy. We hope that it meets the aspirations of the students as well as the Industries of this great nation.
+                </p>
+                <p class="directorText font-weight-500">
+                    <b>Prof. V. Kamakoti, <cite style="font-style: normal">Director, IIT Madras</cite></b>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Details Section -->
+    <section class="program-details">
+        <div class="program-details-grid">
+
+            <!-- Left Column -->
+            <div class="details-left">
+                <div class="details-block">
+                    <h2>What is the Admission Process (Qualifier)?</h2>
+                    <p>You can apply for the Qualifier Exam by clicking on the link above.</p>
+                    <p>You will get access to 4 weeks of course content.</p>
+                    <p>Those who get minimum required scores in weekly assignments in the four weeks will get to write the Qualifier
+                        Exam based on the four weeks of content.</p>
+                    <p>Those who get minimum required scores in the Qualifier Exam continue with the program. Others are encouraged to
+                        reappear for the Qualifier Exam.</p>
+                </div>
+
+                <div class="details-block">
+                    <h2>Who is eligible to apply?</h2>
+                    <p>Anyone who has passed Class 12 (or equivalent) in any year with Physics and Mathematics can apply for the qualifier
+                    exam.
+                    </p>
+                    <p>School students who have appeared for their Class 11 final exams (with Physics and Mathematics as
+                        their subjects of study) can apply. Those who qualify can join the program after passing Class 12.
+                    </p>
+                    <p><a href="/templates/admissions.html#eligibility" class="eligibility-link">Check out Eligibility →</a></p>
+                </div>
+            
+            </div>
+
+            <!-- Right Column -->
+            <div class="details-right">
+                <div class="details-block">
+                    <h2>What is being offered?</h2>
+                    <p>BS Degree in Aeronautics and Space Technology</p>
+                    <p>Option to exit earlier with a Foundation Level Certificate or Diploma</p>
+                </div>
+                
+                <div class="details-block">
+                    <h2>Are these official Diploma and Degree of IIT Madras?</h2>
+                    <p>Yes. IITM senate approves and offers the Diploma(s) and Degree(s).</p>
+                    <p>Degree holders become alumni of IIT Madras.</p>
+                </div>
+            
+                <div class="details-block">
+                    <h2>What is the Structure of the Program?</h2>
+                    <p>The program is split into three levels:</p>
+                    <ul>
+                        <li>1: Foundational Level (32 credits)</li>
+                        <li>2: Diploma Level (52 credits)</li>
+                        <li>3: BS Degree Level (58 credits)</li>
+                    </ul>
+                    <p><strong>Total:</strong> 142 credits for BS Degree</p>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="academics-info">
+            <span>For more detailed information about the program, courses and fee structure, check out the</span>
+            <a href="templates/academics.html" class="academics-button">Academics Page →</a>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-content overall">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <div class="contact-row">
+                    <i class="fas fa-paper-plane"></i>
+                    <div>
+                        IITM BS Degree Office, 3rd Floor, ICSR Building,<br>
+                        IIT Madras, Chennai - 600036
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        +91-9711397993 (Mon-Fri 9am-6pm)<br>
+                        support-ae@study.iitm.ac.in
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-row">
+                <span>© IIT Madras. All rights reserved.</span>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span class="honour-code">honour code</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const btn = document.querySelector('.scroll-to-top');
+
+            // Show button after scrolling 200px
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 200) {
+                    btn.style.display = 'flex';
+                } else {
+                    btn.style.display = 'none';
+                }
+            });
+
+            // Scroll to top on click
+            btn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Hamburger menu toggle
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+
+            // Mobile dropdown toggle
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('a');
+                link.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 1000) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            });
+
+        });
+    </script>
+
+
+    <script>
+        // Password Protection Script
+        const PASSWORD = 'propulsion@0126!'; 
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const passwordModal = document.getElementById('passwordModal');
+            const passwordInput = document.getElementById('passwordInput');
+            const submitBtn = document.getElementById('submitBtn');
+            const errorMessage = document.getElementById('errorMessage');
+
+            // ADD: Eye icon toggle element
+            const togglePassword = document.getElementById('togglePassword');
+
+            // Check if authenticated
+            if (!sessionStorage.getItem('passwordVerified')) {
+                passwordModal.style.display = 'flex';
+            } else {
+                passwordModal.style.display = 'none';
+            }
+
+            // Submit button
+            submitBtn.addEventListener('click', verifyPassword);
+
+            // Press Enter
+            passwordInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    verifyPassword();
+                }
+            });
+
+            // ADD: Show/Hide password
+            togglePassword.addEventListener('click', function () {
+                const type = passwordInput.type === 'password' ? 'text' : 'password';
+                passwordInput.type = type;
+
+                // Change icon
+                togglePassword.textContent = 
+                    type === 'password' ? '👁️' : '🙈';
+            });
+
+            function verifyPassword() {
+                const enteredPassword = passwordInput.value;
+
+                if (enteredPassword === PASSWORD) {
+                    sessionStorage.setItem('passwordVerified', 'true');
+                    passwordModal.style.display = 'none';
+                    errorMessage.textContent = '';
+                    passwordInput.value = '';
+                } else {
+                    errorMessage.textContent = 'Incorrect password. Please try again.';
+                    passwordInput.value = '';
+                    passwordInput.focus();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
