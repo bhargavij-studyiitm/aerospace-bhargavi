@@ -4,7 +4,7 @@
 :root {
     /* Colors */
     --primary-color: #45148a;
-    --primary-color-transparent: ##8251c7;;
+    --primary-color-transparent: #8251c7;;
     --primary-color-dark: #2a057a;
     --social-hover: #1e1629;
     /* --primary-color: #85ffd4;
@@ -659,4 +659,5 @@ hr {
     color: var(--white) !important;
 
 }
+
 
