@@ -4,8 +4,8 @@
     /* --primary-color: #564869;
     --primary-color-transparent: #56486981;
     --primary-color-dark: #2d213e; */
-    --primary-color: #3d08af;
-    --primary-color-transparent: #3b0aa580;
+    --primary-color: #45148a;
+    --primary-color-transparent: #5c22ac;
     --primary-color-dark: #2a057a;
     --social-hover: #1e1629;
     /* --primary-color: #002cbb;
@@ -1219,3 +1219,4 @@ hr {
     font-size: 20px;
     user-select: none;
 }
+
