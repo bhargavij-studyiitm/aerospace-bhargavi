@@ -1,9 +1,12 @@
 /* CSS Variables */
 :root {
     /* Colors */
-    --primary-color: #564869;
+    /* --primary-color: #564869;
     --primary-color-transparent: #56486981;
-    --primary-color-dark: #2d213e;
+    --primary-color-dark: #2d213e; */
+    --primary-color: #3d08af;
+    --primary-color-transparent: #3b0aa580;
+    --primary-color-dark: #2a057a;
     --social-hover: #1e1629;
     /* --primary-color: #002cbb;
     --primary-color-transparent: #393ff078;
@@ -127,7 +130,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-nav);
+    color: var(--primary-color-dark);
     font-weight: 580;
     font-size: 13px;
     white-space: nowrap;
@@ -217,11 +220,24 @@ body {
 }
 
 .notification-content {
-    /* max-width: 60%; */
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
+
+    animation: zoomInOut 3s ease-in-out infinite;
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .notify-btn {
@@ -246,7 +262,7 @@ body {
     margin-top: 147px;
     padding: 60px 40px;
     position: relative;
-    background: linear-gradient(135deg, #564869 0%, #2d213e 100%);
+    background: linear-gradient(135deg, #5f3694 0%, #45148a 100%);
     color: var(--primary-color);
     z-index: 0;
     display: flex;
@@ -255,6 +271,7 @@ body {
     gap: 60px;
     min-height: 600px;
 }
+
 
 .hero-content {
     flex: 1;
@@ -288,7 +305,7 @@ body {
     font-size: 2.2rem;
     line-height: 1.4;
     margin-bottom: 20px;
-    font-weight: 600;
+    font-weight: 700 !important;
 }
 
 .hero-content p {
