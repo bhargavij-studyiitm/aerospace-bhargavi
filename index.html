@@ -144,22 +144,16 @@
                         allowfullscreen></iframe>
             </div>
             <div class="video-description">
-                <p>To provide skill-based training in aeronautics & space technology so that the students learn the analysis and design
-                tools that are commonly used in the related industry, along with the basic theory behind them. This training in design
-                and analysis tools will enable those with a non-aero background to enter an Industry that is working in the field of
-                aeronautics and space technology.</p>
+                 <div class="why-title">Why study Aeronautics and Space Technology?</div>
+                <p>This degree builds expertise in design of aircraft and spacecraft systems and subsystems.
+                     It prepares students for careers in aviation, defense, and space sectors with strong technical and analytical skills. 
+                     This program provides skill-based training in aeronautics & space technology so that the students learn the analysis and 
+                     design tools that are commonly used in the related industry, along with the basic theory behind them. This training in design and
+                      analysis tools will enable those with a non-aero background to enter an Industry that is working in the field of aeronautics and space technology.</p>
             </div>
         </div>
     </section>
 
-    <section class="why-section">
-        <div class="overall">
-            <div class="why-title">Why study Aeronautics and Space Technology?</div>
-            <div class="why-desc">
-                This degree builds expertise in design of aircraft and spacecraft systems and subsystems.  It prepares students for careers in aviation, defense, and space sectors with strong technical and analytical skills.
-            </div>
-        </div>
-    </section>
 
     <!-- Programs Section -->
     <section class="programs-section">
@@ -211,7 +205,7 @@
             <div class="info-block">
                 <h2>Timeline</h2>
                 <ul class="timeline-list">
-                    <li class="timeline-item">Qualifier Application: Opens in February 2026</li>
+                    <li class="timeline-item">Qualifier Application: Opens on 21 February , 2026</li>
                     <li class="timeline-item">Qualifier Application starts: February 18 , 2026</li>
                     <li class="timeline-item">Qualifier Week 1 Starts: June 12 , 2026</li>
                     <li class="timeline-item">Qualifier Exam:  July 19 , 2026</li>
@@ -272,7 +266,7 @@
                     <p>School students who have appeared for their Class 11 final exams (with Physics and Mathematics as
                         their subjects of study) can apply. Those who qualify can join the program after passing Class 12.
                     </p>
-                    <p><a href="/templates/admissions.html#eligibility" class="eligibility-link">Check out Eligibility →</a></p>
+                    <p><a href="/aerospace-bhargavi/admissions.html#eligibility" class="eligibility-link">Check out Eligibility →</a></p>
                 </div>
             
             </div>
@@ -307,7 +301,7 @@
 
         <div class="academics-info">
             <span>For more detailed information about the program, courses and fee structure, check out the</span>
-            <a href="templates/academics.html" class="academics-button">Academics Page →</a>
+            <a href="aerospace-bhargavi/academics.html" class="academics-button">Academics Page →</a>
         </div>
 
     </section>
@@ -407,10 +401,62 @@
     </script>
 
 
+    <script>
+        // Password Protection Script
+        const PASSWORD = 'propulsion@0126!'; 
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const passwordModal = document.getElementById('passwordModal');
+            const passwordInput = document.getElementById('passwordInput');
+            const submitBtn = document.getElementById('submitBtn');
+            const errorMessage = document.getElementById('errorMessage');
+
+            // ADD: Eye icon toggle element
+            const togglePassword = document.getElementById('togglePassword');
+
+            // Check if authenticated
+            if (!sessionStorage.getItem('passwordVerified')) {
+                passwordModal.style.display = 'flex';
+            } else {
+                passwordModal.style.display = 'none';
+            }
+
+            // Submit button
+            submitBtn.addEventListener('click', verifyPassword);
+
+            // Press Enter
+            passwordInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    verifyPassword();
+                }
+            });
+
+            // ADD: Show/Hide password
+            togglePassword.addEventListener('click', function () {
+                const type = passwordInput.type === 'password' ? 'text' : 'password';
+                passwordInput.type = type;
+
+                // Change icon
+                togglePassword.textContent = 
+                    type === 'password' ? '👁️' : '🙈';
+            });
+
+            function verifyPassword() {
+                const enteredPassword = passwordInput.value;
+
+                if (enteredPassword === PASSWORD) {
+                    sessionStorage.setItem('passwordVerified', 'true');
+                    passwordModal.style.display = 'none';
+                    errorMessage.textContent = '';
+                    passwordInput.value = '';
+                } else {
+                    errorMessage.textContent = 'Incorrect password. Please try again.';
+                    passwordInput.value = '';
+                    passwordInput.focus();
+                }
+            }
+        });
     </script>
 </body>
-
 </html>
-
-
 
