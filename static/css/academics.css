@@ -3,9 +3,9 @@
 /* CSS Variables */
 :root {
     /* Colors */
-    --primary-color: #564869;
-    --primary-color-transparent: #56486981;
-    --primary-color-dark: #2d213e;
+    --primary-color: #45148a;
+    --primary-color-transparent: #5c22ac;
+    --primary-color-dark: #2a057a;
     --social-hover: #1e1629;
     /* --primary-color: #85ffd4;
     --primary-color-transparent: #3ebc839c;
@@ -1415,4 +1415,5 @@ hr {
 .dropdown-menu a:hover {
     background-color: var(--primary-color-dark);
     color: var(--white) !important;
+
 }
