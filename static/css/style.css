@@ -686,7 +686,8 @@ body {
 }
 
 .testimonial-text {
-    color: var(--text-dark);
+    /* color: var(--text-dark); */
+    color: white;
     line-height: 1.8;
     font-size: var(--font-regular);
     margin-bottom: 20px;
@@ -1220,6 +1221,7 @@ hr {
     font-size: 20px;
     user-select: none;
 }
+
 
 
 
