@@ -262,7 +262,8 @@ body {
     margin-top: 147px;
     padding: 60px 40px;
     position: relative;
-    background: linear-gradient(135deg, #5f3694 0%, #45148a 100%);
+    /* background: linear-gradient(135deg, #5f3694 0%, #45148a 100%); */
+    background-image: url("../images/index/aerospace-bg.png");
     color: var(--primary-color);
     z-index: 0;
     display: flex;
@@ -1219,5 +1220,6 @@ hr {
     font-size: 20px;
     user-select: none;
 }
+
 
 
